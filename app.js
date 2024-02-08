@@ -173,3 +173,17 @@
 
 // flip("R", [13, 2, 62, 4, 7, 93]);
 // flip("L", [1, 4, 5, 3, 5]);
+
+/*
+ *  Grasshopper - Summation
+ */
+
+var summation = function (num) {
+  //   let sum = 0;
+  //   for (let i = 0; i <= num; i += 1) {
+  //     sum += i;
+  //   }
+  console.log((num * (num + 1)) / 2);
+};
+
+summation(8);
