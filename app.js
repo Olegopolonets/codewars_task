@@ -223,3 +223,20 @@
 
 // cubeChecker(-8, -2);
 // cubeChecker(0, 0);
+
+/*
+ *  String repeat
+ */
+
+function repeatStr(n, s) {
+  let newStr = "";
+
+  for (let i = 0; i < n; i += 1) {
+    newStr += s;
+  }
+  console.log(newStr);
+}
+
+console.log(s.repeat(n));
+
+repeatStr(2, "ha ");
