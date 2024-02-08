@@ -178,12 +178,33 @@
  *  Grasshopper - Summation
  */
 
-var summation = function (num) {
-  //   let sum = 0;
-  //   for (let i = 0; i <= num; i += 1) {
-  //     sum += i;
-  //   }
-  console.log((num * (num + 1)) / 2);
-};
+// var summation = function (num) {
+//   let sum = 0;
+//   for (let i = 0; i <= num; i += 1) {
+//     sum += i;
+//   }
+//   console.log((num * (num + 1)) / 2);
+// };
 
-summation(8);
+// summation(8);
+
+/*
+ *  Well of Ideas - Easy Version
+
+ */
+
+function well(x) {
+  let goodsIdea = x.filter((item) => item === "good");
+  if (goodsIdea.length === 0) {
+    console.log("Fail!");
+  } else if (goodsIdea.length > 0 && goodsIdea.length < 2) {
+    console.log("Publish!");
+  } else {
+    console.log("I smell a series!");
+  }
+}
+
+well(["bad", "bad", "bad"]);
+well(["good", "bad", "bad", "bad", "bad"]);
+well(["good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"]);
+// goodsIdea.length > 2 ? console.log() : console.log();
