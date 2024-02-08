@@ -193,18 +193,33 @@
 
  */
 
-function well(x) {
-  let goodsIdea = x.filter((item) => item === "good");
-  if (goodsIdea.length === 0) {
-    console.log("Fail!");
-  } else if (goodsIdea.length > 0 && goodsIdea.length < 2) {
-    console.log("Publish!");
-  } else {
-    console.log("I smell a series!");
-  }
-}
+// function well(x) {
+//   let goodsIdea = x.filter((item) => item === "good");
+//   if (goodsIdea.length === 0) {
+//     console.log("Fail!");
+//   } else if (goodsIdea.length > 0 && goodsIdea.length < 2) {
+//     console.log("Publish!");
+//   } else {
+//     console.log("I smell a series!");
+//   }
+// }
 
-well(["bad", "bad", "bad"]);
-well(["good", "bad", "bad", "bad", "bad"]);
-well(["good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"]);
-// goodsIdea.length > 2 ? console.log() : console.log();
+// well(["bad", "bad", "bad"]);
+// well(["good", "bad", "bad", "bad", "bad"]);
+// well(["good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"]);
+
+/*
+ *  Find out whether the shape is a cube
+ */
+
+// var cubeChecker = function (volume, side) {
+//   if (side > 0 && side * side * side === volume) {
+//     console.log("true");
+//   } else {
+//     console.log("false");
+//   }
+// //   return side > 0 && side * side * side === volume ? true : false;
+// };
+
+// cubeChecker(-8, -2);
+// cubeChecker(0, 0);
