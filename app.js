@@ -228,15 +228,33 @@
  *  String repeat
  */
 
-function repeatStr(n, s) {
-  let newStr = "";
+// function repeatStr(n, s) {
+//   let newStr = "";
 
-  for (let i = 0; i < n; i += 1) {
-    newStr += s;
+//   for (let i = 0; i < n; i += 1) {
+//     newStr += s;
+//   }
+//   console.log(newStr);
+// }
+
+// console.log(s.repeat(n));
+
+// repeatStr(2, "ha ");
+
+/*
+ *  All Star Code Challenge #18
+ */
+
+function strCount(str, letter) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === letter) {
+      count++;
+    }
   }
-  console.log(newStr);
+  console.log(count);
 }
 
-console.log(s.repeat(n));
-
-repeatStr(2, "ha ");
+strCount("Hello", "o");
+strCount("Hello", "l");
+strCount("", "e");
