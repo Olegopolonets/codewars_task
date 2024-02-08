@@ -50,7 +50,7 @@
 //   return console.log(arr[nbPetals % arr.length]);
 // }
 
-// // howMuchILoveYou(42);
+//  howMuchILoveYou(42);
 // howMuchILoveYou(66);
 // howMuchILoveYou(8);
 
@@ -101,7 +101,7 @@
 //       sumTrue += 0;
 //     }
 //   }
-//   //
+//
 //   console.log(sheep.filter(Boolean).length);
 // }
 
@@ -123,11 +123,11 @@
 
 // for (let i = 0; i < arr.length; i += 0) {
 //   if (arr[i] > 0) {
-//     // sumPositve += arr[i];
+//      sumPositve += arr[i];
 //     modArr.push(arr[i]);
 //   }
 // }
-// // console.log(sumPositve);
+//  console.log(sumPositve);
 
 // let arrayOne = [1, 2, 3];
 // let arrayTwo = [4, 5, 6];
@@ -155,15 +155,21 @@
 // feast("chickadee", "chocolate cake");
 // feast("brown bear", "bear claw");
 
-const flip = (d, arr) => {
-  if (d === "R") {
-    let sortArr = arr.sort();
-    console.log(sortArr);
-  } else if (d === "L") {
-    let sortArr = arr.sort().reverse();
-    console.log(sortArr);
-  }
-};
+/*
+ *  Gravity Flip
+ */
+// const flip = (d, arr) => {
+//   let sortArr;
+//   d === "R" ? arr.sort((a, b) => a - b) : arr.sort((a, b) => b - a);
+// };
 
-flip("R", [3, 2, 1, 2]);
-flip("L", [1, 4, 5, 3, 5]);
+// if (d === "R") {
+//   sortArr = arr.sort((a, b) => a - b);
+//   console.log(sortArr);
+// } else if (d === "L") {
+//   sortArr = arr.sort((a, b) => b - a);
+//   console.log(sortArr);
+// }
+
+// flip("R", [13, 2, 62, 4, 7, 93]);
+// flip("L", [1, 4, 5, 3, 5]);
