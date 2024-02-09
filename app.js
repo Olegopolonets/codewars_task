@@ -245,16 +245,28 @@
  *  All Star Code Challenge #18
  */
 
-function strCount(str, letter) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === letter) {
-      count++;
-    }
-  }
-  console.log(count);
+// function strCount(str, letter) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === letter) {
+//       count++;
+//     }
+//   }
+//   console.log(count);
+// }
+
+// strCount("Hello", "o");
+// strCount("Hello", "l");
+// strCount("", "e");
+
+/*
+ * List Filtering
+ */
+
+function filter_list(l) {
+  console.log(l.filter((item) => typeof item == "number"));
 }
 
-strCount("Hello", "o");
-strCount("Hello", "l");
-strCount("", "e");
+filter_list([1, 2, "a", "b"]);
+
+filter_list([1, "a", "b", 0, 15]);
