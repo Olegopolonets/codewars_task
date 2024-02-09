@@ -301,12 +301,25 @@
  * Get the mean of an array
  */
 
-function getAverage(marks) {
-  let newArr = Math.floor(marks.reduce((a, b) => a + b) / marks.length);
+// function getAverage(marks) {
+//   let newArr = Math.floor(marks.reduce((a, b) => a + b) / marks.length);
+//   console.log(newArr);
+// }
+
+// getAverage([2, 2, 2, 2]);
+// getAverage([67, 199, 21, 2]);
+// getAverage([14, 63, 52, 12]);
+// getAverage([1, 2, 3, 4, 5]);
+
+/*
+ * Sum of positive
+ */
+
+function positiveSum(arr) {
+  let newArr = arr.filter((item) => item >= 0).reduce((a, b) => a + b, 0);
   console.log(newArr);
 }
 
-getAverage([2, 2, 2, 2]);
-getAverage([67, 199, 21, 2]);
-getAverage([14, 63, 52, 12]);
-getAverage([1, 2, 3, 4, 5]);
+positiveSum([1, 2, 3, 4, 5]);
+positiveSum([-1, -2, -3, -4, -5]);
+positiveSum([-1, 2, 3, 4, -5]);
