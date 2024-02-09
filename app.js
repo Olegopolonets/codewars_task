@@ -315,11 +315,27 @@
  * Sum of positive
  */
 
-function positiveSum(arr) {
-  let newArr = arr.filter((item) => item >= 0).reduce((a, b) => a + b, 0);
-  console.log(newArr);
+// function positiveSum(arr) {
+//   let newArr = arr.filter((item) => item >= 0).reduce((a, b) => a + b, 0);
+//   console.log(newArr);
+// }
+
+// positiveSum([1, 2, 3, 4, 5]);
+// positiveSum([-1, -2, -3, -4, -5]);
+// positiveSum([-1, 2, 3, 4, -5]);
+
+/*
+ * Reversed Strings
+ */
+function solution(str) {
+  // let arr = [];
+  // for (let i = 0; i < str.length; i++) {
+  //   arr.push(str[i]);
+  // }
+  // console.log(arr.reverse().join().replace(/,/g, ""));
+  console.log(str.split("").reverse().join(""));
 }
 
-positiveSum([1, 2, 3, 4, 5]);
-positiveSum([-1, -2, -3, -4, -5]);
-positiveSum([-1, 2, 3, 4, -5]);
+solution("world");
+solution("");
+solution("h");
