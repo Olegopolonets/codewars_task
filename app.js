@@ -263,10 +263,36 @@
  * List Filtering
  */
 
-function filter_list(l) {
-  console.log(l.filter((item) => typeof item == "number"));
+// function filter_list(l) {
+//   console.log(l.filter((item) => typeof item == "number"));
+// }
+
+// filter_list([1, 2, "a", "b"]);
+
+// filter_list([1, "a", "b", 0, 15]);
+
+/*
+ * Return Negative
+ */
+
+// function makeNegative(num) {
+//   console.log(num > 0 ? num * -1 : num);
+// }
+
+// makeNegative(42);
+// makeNegative(-42);
+// makeNegative(0);
+// makeNegative(10);
+
+/*
+ * Find numbers which are divisible by given number
+ */
+
+function divisibleBy(numbers, divisor) {
+  let newArr = numbers.filter((item) => item % divisor === 0);
+  console.log(newArr);
 }
 
-filter_list([1, 2, "a", "b"]);
-
-filter_list([1, "a", "b", 0, 15]);
+divisibleBy([1, 2, 3, 4, 5, 6], 2);
+divisibleBy([0, 1, 2, 3, 4, 5, 6], 4);
+divisibleBy([1, 3, 5], 2);
