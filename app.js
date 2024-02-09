@@ -327,15 +327,48 @@
 /*
  * Reversed Strings
  */
-function solution(str) {
-  // let arr = [];
-  // for (let i = 0; i < str.length; i++) {
-  //   arr.push(str[i]);
-  // }
-  // console.log(arr.reverse().join().replace(/,/g, ""));
-  console.log(str.split("").reverse().join(""));
-}
+// function solution(str) {
+// let arr = [];
+// for (let i = 0; i < str.length; i++) {
+//   arr.push(str[i]);
+// }
+// console.log(arr.reverse().join().replace(/,/g, ""));
+//   console.log(str.split("").reverse().join(""));
+// }
 
-solution("world");
-solution("");
-solution("h");
+// solution("world");
+// solution("");
+// solution("h");
+
+/*
+ * Rock Paper Scissors!
+ */
+
+const rps = (p1, p2) => {
+  let winOnePlayer = 1;
+  let winTwoPlayer = 2;
+
+  if (p1 === p2) {
+    console.log("Draw!");
+  } else if (
+    (p1 === "rock" && p2 === "scissors") ||
+    (p1 === "scissors" && p2 === "paper") ||
+    (p1 === "paper" && p2 === "rock")
+  ) {
+    console.log(`Player ${winOnePlayer} won!`);
+  } else {
+    console.log(`Player ${winTwoPlayer} won!`);
+  }
+};
+
+rps("rock", "scissors");
+
+rps("scissors", "paper");
+
+rps("paper", "rock");
+
+rps("rock", "paper");
+
+rps("paper", "scissors");
+
+rps("rock", "rock");
