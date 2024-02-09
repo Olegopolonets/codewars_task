@@ -288,11 +288,25 @@
  * Find numbers which are divisible by given number
  */
 
-function divisibleBy(numbers, divisor) {
-  let newArr = numbers.filter((item) => item % divisor === 0);
+// function divisibleBy(numbers, divisor) {
+//   let newArr = numbers.filter((item) => item % divisor === 0);
+//   console.log(newArr);
+// }
+
+// divisibleBy([1, 2, 3, 4, 5, 6], 2);
+// divisibleBy([0, 1, 2, 3, 4, 5, 6], 4);
+// divisibleBy([1, 3, 5], 2);
+
+/*
+ * Get the mean of an array
+ */
+
+function getAverage(marks) {
+  let newArr = Math.floor(marks.reduce((a, b) => a + b) / marks.length);
   console.log(newArr);
 }
 
-divisibleBy([1, 2, 3, 4, 5, 6], 2);
-divisibleBy([0, 1, 2, 3, 4, 5, 6], 4);
-divisibleBy([1, 3, 5], 2);
+getAverage([2, 2, 2, 2]);
+getAverage([67, 199, 21, 2]);
+getAverage([14, 63, 52, 12]);
+getAverage([1, 2, 3, 4, 5]);
