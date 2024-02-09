@@ -344,31 +344,50 @@
  * Rock Paper Scissors!
  */
 
-const rps = (p1, p2) => {
-  let winOnePlayer = 1;
-  let winTwoPlayer = 2;
+// const rps = (p1, p2) => {
+//   let winOnePlayer = 1;
+//   let winTwoPlayer = 2;
 
-  if (p1 === p2) {
-    console.log("Draw!");
-  } else if (
-    (p1 === "rock" && p2 === "scissors") ||
-    (p1 === "scissors" && p2 === "paper") ||
-    (p1 === "paper" && p2 === "rock")
-  ) {
-    console.log(`Player ${winOnePlayer} won!`);
-  } else {
-    console.log(`Player ${winTwoPlayer} won!`);
-  }
+//   if (p1 === p2) {
+//     console.log("Draw!");
+//   } else if (
+//     (p1 === "rock" && p2 === "scissors") ||
+//     (p1 === "scissors" && p2 === "paper") ||
+//     (p1 === "paper" && p2 === "rock")
+//   ) {
+//     console.log(`Player ${winOnePlayer} won!`);
+//   } else {
+//     console.log(`Player ${winTwoPlayer} won!`);
+//   }
+// };
+
+// rps("rock", "scissors");
+// rps("scissors", "paper");
+// rps("paper", "rock");
+// rps("rock", "paper");
+// rps("paper", "scissors");
+// rps("rock", "rock");
+
+/*
+ * Pirates!! Are the Cannons ready!??
+ */
+
+let a = { Mike: "aye", Joe: "aye", Johnson: "aye", Peter: "aye" };
+let b = { Mike: "aye", Joe: "nay", Johnson: "aye", Peter: "aye" };
+
+const cannonsReady = (gunners) => {
+  // let count = 0;
+  // for (const key in gunners) {
+  //   if (gunners[key] === "aye") {
+  //     count++;
+  //   }
+  // }
+  // console.log(count === Object.keys(gunners).length ? "Fire!" : "Shiver me timbers!");
+
+  // let countTrue = Object.values(gunners).filter((item) => item === "aye").length;
+  // console.log(countTrue === Object.keys(gunners).length ? "Fire!" : "Shiver me timbers!");
+  console.log(Object.values(gunners).some((m) => m === "nay") ? "Shiver me timbers!" : "Fire!");
 };
 
-rps("rock", "scissors");
-
-rps("scissors", "paper");
-
-rps("paper", "rock");
-
-rps("rock", "paper");
-
-rps("paper", "scissors");
-
-rps("rock", "rock");
+cannonsReady(a);
+cannonsReady(b);
