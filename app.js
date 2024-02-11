@@ -372,22 +372,33 @@
  * Pirates!! Are the Cannons ready!??
  */
 
-let a = { Mike: "aye", Joe: "aye", Johnson: "aye", Peter: "aye" };
-let b = { Mike: "aye", Joe: "nay", Johnson: "aye", Peter: "aye" };
+// let a = { Mike: "aye", Joe: "aye", Johnson: "aye", Peter: "aye" };
+// let b = { Mike: "aye", Joe: "nay", Johnson: "aye", Peter: "aye" };
 
-const cannonsReady = (gunners) => {
-  // let count = 0;
-  // for (const key in gunners) {
-  //   if (gunners[key] === "aye") {
-  //     count++;
-  //   }
-  // }
-  // console.log(count === Object.keys(gunners).length ? "Fire!" : "Shiver me timbers!");
+// const cannonsReady = (gunners) => {
+// let count = 0;
+// for (const key in gunners) {
+//   if (gunners[key] === "aye") {
+//     count++;
+//   }
+// }
+// console.log(count === Object.keys(gunners).length ? "Fire!" : "Shiver me timbers!");
 
-  // let countTrue = Object.values(gunners).filter((item) => item === "aye").length;
-  // console.log(countTrue === Object.keys(gunners).length ? "Fire!" : "Shiver me timbers!");
-  console.log(Object.values(gunners).some((m) => m === "nay") ? "Shiver me timbers!" : "Fire!");
-};
+//  let countTrue = Object.values(gunners).filter((item) => item === "aye").length;
+// console.log(countTrue === Object.keys(gunners).length ? "Fire!" : "Shiver me timbers!");
+//   console.log(Object.values(gunners).some((m) => m === "nay") ? "Shiver me timbers!" : "Fire!");
+// };
 
-cannonsReady(a);
-cannonsReady(b);
+// cannonsReady(a);
+// cannonsReady(b);
+
+/*
+ * Sum of array singles
+ */
+function repeats(arr) {
+  let filtArr = arr.filter((item, index) => arr.indexOf(item) !== index);
+  console.log(filtArr);
+}
+
+repeats([4, 5, 7, 5, 4, 8]); // 15
+repeats([9, 10, 19, 13, 19, 13]); // 19
