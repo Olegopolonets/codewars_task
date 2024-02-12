@@ -33,27 +33,40 @@
  *  3. Створи функцію, яка приймає масив об'єктів і повертає новий масив, в якому тільки ті об'єкти, властивість "age" яких більше або рівна 18.
  */
 
-const arrPeople = [
-  {
-    id: "1",
-    name: "Oleh",
-    age: 5,
-  },
-  {
-    id: "2",
-    name: "Asya",
-    age: 18,
-  },
-  {
-    id: "3",
-    name: "Kira",
-    age: 19,
-  },
-];
+// const arrPeople = [
+//   {
+//     id: "1",
+//     name: "Oleh",
+//     age: 5,
+//   },
+//   {
+//     id: "2",
+//     name: "Asya",
+//     age: 18,
+//   },
+//   {
+//     id: "3",
+//     name: "Kira",
+//     age: 19,
+//   },
+// ];
 
-function isAdult(arr) {
-  let newArr = arr.filter((item) => item.age >= 18);
-  console.log(newArr);
+// function isAdult(arr) {
+//   let newArr = arr.filter((item) => item.age >= 18);
+//   console.log(newArr);
+// }
+
+// isAdult(arrPeople);
+
+/*
+ *  4. Створи функцію, яка приймає масив чисел і повертає середнє арифметичне цих чисел.
+ */
+
+let arr = [12, 76, 43, 5];
+
+function arithmeticMean(arr) {
+  let newArr = arr.reduce((a, b) => a + b) / arr.length;
+  console.log(+newArr.toFixed(2));
 }
 
-isAdult(arrPeople);
+arithmeticMean(arr);
