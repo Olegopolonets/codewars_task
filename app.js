@@ -396,8 +396,24 @@
  * Sum of array singles
  */
 function repeats(arr) {
-  let filtArr = arr.filter((item, index) => arr.indexOf(item) !== index);
-  console.log(filtArr);
+  // const counts = {};
+  // for (const num of arr) {
+  //   counts[num] = (counts[num] || 0) + 1;
+  // }
+
+  // let uniqueSum = 0;
+
+  // for (const num of arr) {
+  //   if (counts[num] === 1) {
+  //     uniqueSum += num;
+  //   }
+  // }
+  // console.log(uniqueSum);
+
+  let newArr = arr
+    .filter((item) => arr.indexOf(item) === arr.lastIndexOf(item))
+    .reduce((a, b) => a + b);
+  console.log(newArr);
 }
 
 repeats([4, 5, 7, 5, 4, 8]); // 15
