@@ -395,26 +395,54 @@
 /*
  * Sum of array singles
  */
-function repeats(arr) {
-  // const counts = {};
-  // for (const num of arr) {
-  //   counts[num] = (counts[num] || 0) + 1;
-  // }
+// function repeats(arr) {
+//   // const counts = {};
+//   // for (const num of arr) {
+//   //   counts[num] = (counts[num] || 0) + 1;
+//   // }
 
-  // let uniqueSum = 0;
+//   // let uniqueSum = 0;
 
-  // for (const num of arr) {
-  //   if (counts[num] === 1) {
-  //     uniqueSum += num;
-  //   }
-  // }
-  // console.log(uniqueSum);
+//   // for (const num of arr) {
+//   //   if (counts[num] === 1) {
+//   //     uniqueSum += num;
+//   //   }
+//   // }
+//   // console.log(uniqueSum);
 
-  let newArr = arr
-    .filter((item) => arr.indexOf(item) === arr.lastIndexOf(item))
-    .reduce((a, b) => a + b);
-  console.log(newArr);
+//   let newArr = arr
+//     .filter((item) => arr.indexOf(item) === arr.lastIndexOf(item))
+//     .reduce((a, b) => a + b);
+//   console.log(newArr);
+// }
+
+// repeats([4, 5, 7, 5, 4, 8]); // 15
+// repeats([9, 10, 19, 13, 19, 13]); // 19
+
+/*
+ * The Hashtag Generator
+ */
+
+function generateHashtag(str) {
+  let trimStr = str.replace(/\s+/g, "");
+  if (trimStr.length >= 140 || trimStr.length === 0) {
+    return false;
+  }
+  let newArr = str.split(" ").filter((item) => item !== "");
+  let pasteStr = newArr.map((item) => item[0].toUpperCase() + item.slice(1));
+  console.log(`#${pasteStr.join("")}`);
 }
 
-repeats([4, 5, 7, 5, 4, 8]); // 15
-repeats([9, 10, 19, 13, 19, 13]); // 19
+// function generateHashtag (str) {
+//   var hash = '#';
+//   str.split(' ').map(a => {
+//     hash += a.charAt(0).toUpperCase() + a.slice(1);
+//   });
+//   return hash != '#' && hash.length <= 140 ? hash : false;
+// }
+
+generateHashtag("Codewars is nice");
+generateHashtag("");
+generateHashtag("Hello world");
+generateHashtag("Do We have A Hashtag    ");
+generateHashtag("");
