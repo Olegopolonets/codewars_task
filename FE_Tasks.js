@@ -62,11 +62,15 @@
  *  4. Створи функцію, яка приймає масив чисел і повертає середнє арифметичне цих чисел.
  */
 
-let arr = [12, 76, 43, 5];
+// let arr = [12, 76, 43, 5];
 
-function arithmeticMean(arr) {
-  let newArr = arr.reduce((a, b) => a + b) / arr.length;
-  console.log(+newArr.toFixed(2));
-}
+// function arithmeticMean(arr) {
+//   let newArr = arr.reduce((a, b) => a + b) / arr.length;
+//   console.log(+newArr.toFixed(2));
+// }
 
-arithmeticMean(arr);
+// arithmeticMean(arr);
+
+/*
+ *  5. Створи функцію, яка приймає рядок і повертає новий рядок, у якому всі слова з великої літери записані в оберненому порядку.
+ */

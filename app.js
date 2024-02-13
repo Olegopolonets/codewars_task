@@ -423,26 +423,26 @@
  * The Hashtag Generator
  */
 
-function generateHashtag(str) {
-  let trimStr = str.replace(/\s+/g, "");
-  if (trimStr.length >= 140 || trimStr.length === 0) {
-    return false;
-  }
-  let newArr = str.split(" ").filter((item) => item !== "");
-  let pasteStr = newArr.map((item) => item[0].toUpperCase() + item.slice(1));
-  console.log(`#${pasteStr.join("")}`);
-}
-
-// function generateHashtag (str) {
-//   var hash = '#';
-//   str.split(' ').map(a => {
-//     hash += a.charAt(0).toUpperCase() + a.slice(1);
-//   });
-//   return hash != '#' && hash.length <= 140 ? hash : false;
+// function generateHashtag(str) {
+//   let trimStr = str.replace(/\s+/g, "");
+//   if (trimStr.length >= 140 || trimStr.length === 0) {
+//     return false;
+//   }
+//   let newArr = str.split(" ").filter((item) => item !== "");
+//   let pasteStr = newArr.map((item) => item[0].toUpperCase() + item.slice(1));
+//   console.log(`#${pasteStr.join("")}`);
 // }
 
-generateHashtag("Codewars is nice");
-generateHashtag("");
-generateHashtag("Hello world");
-generateHashtag("Do We have A Hashtag    ");
-generateHashtag("");
+// // function generateHashtag (str) {
+// //   var hash = '#';
+// //   str.split(' ').map(a => {
+// //     hash += a.charAt(0).toUpperCase() + a.slice(1);
+// //   });
+// //   return hash != '#' && hash.length <= 140 ? hash : false;
+// // }
+
+// generateHashtag("Codewars is nice");
+// generateHashtag("");
+// generateHashtag("Hello world");
+// generateHashtag("Do We have A Hashtag    ");
+// generateHashtag("");
