@@ -75,15 +75,26 @@
  *  5. Створи функцію, яка приймає рядок і повертає новий рядок, у якому всі слова з великої літери записані в оберненому порядку.
  */
 
-let string = "eggs are required";
+// let string = "eggs are required";
 
-function generateHashtag(str) {
-  let hash = "";
-  let reverseStr = [...str].reverse().join("");
-  reverseStr.split(" ").map((a) => {
-    hash += a.charAt(0).toUpperCase() + a.slice(1) + " ";
-  });
-  console.log(hash);
+// function generateHashtag(str) {
+//   let hash = "";
+//   let reverseStr = [...str].reverse().join("");
+//   reverseStr.split(" ").map((a) => {
+//     hash += a.charAt(0).toUpperCase() + a.slice(1) + " ";
+//   });
+//   console.log(hash);
+// }
+
+// generateHashtag(string);
+
+/*
+ *  6. Створи функцію, яка приймає два аргументи - рядок та символ, і повертає кількість входжень цього символу в рядок.
+ */
+
+function ifInString(str, char) {
+  let countChar = str.split("").filter((item) => item === char).length;
+  console.log(countChar);
 }
 
-generateHashtag(string);
+ifInString("The village is so small that its entire length could be walked in 15 minutes.", "i");
