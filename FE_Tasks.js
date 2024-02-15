@@ -92,9 +92,9 @@
  *  6. Створи функцію, яка приймає два аргументи - рядок та символ, і повертає кількість входжень цього символу в рядок.
  */
 
-function ifInString(str, char) {
-  let countChar = str.split("").filter((item) => item === char).length;
-  console.log(countChar);
-}
+// function ifInString(str, char) {
+//   let countChar = str.split("").filter((item) => item === char).length;
+//   console.log(countChar);
+// }
 
-ifInString("The village is so small that its entire length could be walked in 15 minutes.", "i");
+// ifInString("The village is so small that its entire length could be walked in 15 minutes.", "e");
