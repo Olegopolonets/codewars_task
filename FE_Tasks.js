@@ -100,13 +100,48 @@
 // ifInString("The village is so small that its entire length could be walked in 15 minutes.", "e");
 
 /*
- *  6. Створи функцію, яка приймає масив чисел та повертає новий масив, який містить лише унікальні числа з вихідного масиву (тобто кожне число в новому масиві зустрічається тільки один раз).
+ *  7. Створи функцію, яка приймає масив чисел та повертає новий масив, який містить лише унікальні числа з вихідного масиву (тобто кожне число в новому масиві зустрічається тільки один раз).
  */
 
-function repeats(arr) {
-  let newArr = arr.filter((item) => arr.indexOf(item) === arr.lastIndexOf(item));
-  console.log(newArr);
+// function repeats(arr) {
+//   let newArr = arr.filter((item) => arr.indexOf(item) === arr.lastIndexOf(item));
+//   console.log(newArr);
+// }
+
+// repeats([4, 5, 7, 5, 4, 8]);
+// repeats([9, 10, 19, 13, 19, 13]);
+
+/*
+ *  8. Створи функцію, яка приймає масив об'єктів з властивістю age та повертає середній вік цих об'єктів.
+ */
+const arrPeople = [
+  {
+    id: "1",
+    name: "Oleh",
+    age: 5,
+  },
+  {
+    id: "2",
+    name: "Asya",
+    age: 18,
+  },
+  {
+    id: "3",
+    name: "Kira",
+    age: 19,
+  },
+];
+
+function middleAge(arrObj) {
+  //   let newArr = arrObj.reduce((acc, person) => acc + person.age, 0) / arrObj.length;
+  //   console.log(newArr);
+  let count = 0;
+  let elements = 0;
+  for (let i = 0; i < arrObj.length; i++) {
+    count += arrObj[i].age;
+    elements += 1;
+  }
+  console.log(count / elements);
 }
 
-repeats([4, 5, 7, 5, 4, 8]);
-repeats([9, 10, 19, 13, 19, 13]);
+middleAge(arrPeople);
