@@ -446,3 +446,19 @@
 // generateHashtag("Hello world");
 // generateHashtag("Do We have A Hashtag    ");
 // generateHashtag("");
+
+/*
+ * Remove the minimum
+ */
+
+function removeSmallest(newArr) {
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr[i] === Math.min(...newArr)) {
+      newArr.splice(i, 1);
+      break;
+    }
+  }
+  console.log(newArr);
+}
+
+removeSmallest([7, 2, 3, 4, 5, 2]);

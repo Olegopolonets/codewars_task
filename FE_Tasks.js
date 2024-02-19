@@ -114,34 +114,34 @@
 /*
  *  8. Створи функцію, яка приймає масив об'єктів з властивістю age та повертає середній вік цих об'єктів.
  */
-const arrPeople = [
-  {
-    id: "1",
-    name: "Oleh",
-    age: 5,
-  },
-  {
-    id: "2",
-    name: "Asya",
-    age: 18,
-  },
-  {
-    id: "3",
-    name: "Kira",
-    age: 19,
-  },
-];
+// const arrPeople = [
+//   {
+//     id: "1",
+//     name: "Oleh",
+//     age: 5,
+//   },
+//   {
+//     id: "2",
+//     name: "Asya",
+//     age: 18,
+//   },
+//   {
+//     id: "3",
+//     name: "Kira",
+//     age: 19,
+//   },
+// ];
 
-function middleAge(arrObj) {
-  //   let newArr = arrObj.reduce((acc, person) => acc + person.age, 0) / arrObj.length;
-  //   console.log(newArr);
-  let count = 0;
-  let elements = 0;
-  for (let i = 0; i < arrObj.length; i++) {
-    count += arrObj[i].age;
-    elements += 1;
-  }
-  console.log(count / elements);
-}
+// function middleAge(arrObj) {
+//   //   let newArr = arrObj.reduce((acc, person) => acc + person.age, 0) / arrObj.length;
+//   //   console.log(newArr);
+//   let count = 0;
+//   let elements = 0;
+//   for (let i = 0; i < arrObj.length; i++) {
+//     count += arrObj[i].age;
+//     elements += 1;
+//   }
+//   console.log(count / elements);
+// }
 
-middleAge(arrPeople);
+// middleAge(arrPeople);
