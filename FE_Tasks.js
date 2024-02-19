@@ -145,3 +145,50 @@
 // }
 
 // middleAge(arrPeople);
+
+/*
+ *  9. Створи функцію, яка приймає масив об'єктів з властивістю price та повертає найбільшу ціну з цих об'єктів.
+ */
+
+const products = [
+  {
+    name: "Apple",
+    price: 5,
+  },
+  {
+    name: "Banana",
+    price: 7,
+  },
+  {
+    name: "Tomato",
+    price: 4,
+  },
+  {
+    name: "Cucumber",
+    price: 3,
+  },
+  {
+    name: "Orange",
+    price: 6,
+  },
+];
+
+function totalPrice(products) {
+  // Перевірити, чи масив products не пустий
+  if (!products || !products.length) {
+    return undefined;
+  }
+  // Встановити початкове значення максимальної ціни
+  let maxPrice = products[0].price;
+  // Перебрати масив продуктів
+  for (const product of products) {
+    // Оновити максимальну ціну, якщо поточна ціна продукту більша
+    if (product.price > maxPrice) {
+      maxPrice = product.price;
+    }
+  }
+
+  console.log(maxPrice);
+}
+
+totalPrice(products);
