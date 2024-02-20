@@ -451,14 +451,33 @@
  * Remove the minimum
  */
 
-function removeSmallest(newArr) {
-  for (let i = 0; i < newArr.length; i++) {
-    if (newArr[i] === Math.min(...newArr)) {
-      newArr.splice(i, 1);
-      break;
-    }
-  }
-  console.log(newArr);
+// function removeSmallest(newArr) {
+//   for (let i = 0; i < newArr.length; i++) {
+//     if (newArr[i] === Math.min(...newArr)) {
+//       newArr.splice(i, 1);
+//       break;
+//     }
+//   }
+//   console.log(newArr);
+// }
+
+// removeSmallest([7, 2, 3, 4, 5, 2]);
+
+/*
+ * Shortest Word
+ */
+
+function findShort(s) {
+  // let words = s.split(" ");
+  // let shortestWord = words[0];
+  // for (let i = 0; i < words.length; i++) {
+  //   if (words[i].length < shortestWord.length) {
+  //     shortestWord = words[i];
+  //   }
+  // }
+  // console.log(shortestWord);
+  let minLength = s.split(" ").sort((a, b) => a.length - b.length)[0].length || 0;
+  console.log(minLength);
 }
 
-removeSmallest([7, 2, 3, 4, 5, 2]);
+findShort("bitcoin take over the world maybe who knows perhaps");
