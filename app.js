@@ -467,17 +467,36 @@
  * Shortest Word
  */
 
-function findShort(s) {
-  // let words = s.split(" ");
-  // let shortestWord = words[0];
-  // for (let i = 0; i < words.length; i++) {
-  //   if (words[i].length < shortestWord.length) {
-  //     shortestWord = words[i];
-  //   }
-  // }
-  // console.log(shortestWord);
-  let minLength = s.split(" ").sort((a, b) => a.length - b.length)[0].length || 0;
-  console.log(minLength);
+// function findShort(s) {
+//   // let words = s.split(" ");
+//   // let shortestWord = words[0];
+//   // for (let i = 0; i < words.length; i++) {
+//   //   if (words[i].length < shortestWord.length) {
+//   //     shortestWord = words[i];
+//   //   }
+//   // }
+//   // console.log(shortestWord);
+//   let minLength = s.split(" ").sort((a, b) => a.length - b.length)[0].length || 0;
+//   console.log(minLength);
+// }
+
+// findShort("bitcoin take over the world maybe who knows perhaps");
+
+/*
+ * Odd Ones Out!
+ */
+
+function oddOnesOut(list) {
+  const counts = {};
+
+  for (const num of list) {
+    counts[num] = (counts[num] || 0) + 1;
+  }
+  console.log("counts", counts);
+
+  console.log(list.filter((num) => counts[num] % 2 === 0));
 }
 
-findShort("bitcoin take over the world maybe who knows perhaps");
+oddOnesOut([1, 2, 3, 1, 3, 3]);
+
+oddOnesOut([75, 68, 75, 47, 68]);
