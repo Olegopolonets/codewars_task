@@ -150,56 +150,96 @@
  *  9. Створи функцію, яка приймає масив об'єктів з властивістю price та повертає найбільшу ціну з цих об'єктів.
  */
 
-const products = [
+// const products = [
+//   {
+//     name: "Apple",
+//     price: 5,
+//   },
+//   {
+//     name: "Banana",
+//     price: 7,
+//   },
+//   {
+//     name: "Tomato",
+//     price: 4,
+//   },
+//   {
+//     name: "Cucumber",
+//     price: 3,
+//   },
+//   {
+//     name: "Orange",
+//     price: 6,
+//   },
+// ];
+
+// function totalPrice(products) {
+//   // Перевірити, чи масив products не пустий
+//   if (!products || !products.length) {
+//     return undefined;
+//   }
+//   // Встановити початкове значення максимальної ціни
+//   let maxPrice = products[0].price;
+//   // Перебрати масив продуктів
+//   for (const product of products) {
+//     // Оновити максимальну ціну, якщо поточна ціна продукту більша
+//     if (product.price > maxPrice) {
+//       maxPrice = product.price;
+//     }
+//   }
+
+//   console.log(maxPrice);
+// }
+
+// totalPrice(products);
+
+/*
+ *  10. Створи функцію, яка приймає масив об'єктів з властивістю name та повертає новий масив,
+ * який містить тільки ті об'єкти, в яких ім'я починається з певної літери.
+ */
+const arrPeople = [
   {
-    name: "Apple",
-    price: 5,
+    id: "1",
+    name: "Oleh",
+    age: 5,
   },
   {
-    name: "Banana",
-    price: 7,
+    id: "2",
+    name: "Asya",
+    age: 18,
   },
   {
-    name: "Tomato",
-    price: 4,
+    id: "3",
+    name: "Kira",
+    age: 19,
   },
   {
-    name: "Cucumber",
-    price: 3,
-  },
-  {
-    name: "Orange",
-    price: 6,
+    id: "4",
+    name: "Katya",
+    age: 20,
   },
 ];
 
-function totalPrice(products) {
-  // Перевірити, чи масив products не пустий
-  if (!products || !products.length) {
-    return undefined;
-  }
-  // Встановити початкове значення максимальної ціни
-  let maxPrice = products[0].price;
-  // Перебрати масив продуктів
-  for (const product of products) {
-    // Оновити максимальну ціну, якщо поточна ціна продукту більша
-    if (product.price > maxPrice) {
-      maxPrice = product.price;
+function isFirstLetterTrue(obj, letter) {
+  let correctName = [];
+  let newArr = obj.map((item) => item.name);
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr[i].split("")[0].toLowerCase() === letter.toLowerCase()) {
+      correctName.push(newArr[i]);
     }
   }
-
-  console.log(maxPrice);
+  console.log(correctName);
 }
 
-totalPrice(products);
+isFirstLetterTrue(arrPeople, "k");
 
 /*
- *  9. Створи функцію, яка приймає масив чисел та повертає новий масив, в якому кожен елемент є квадратом відповідного елемента вхідного масиву.
+ *  11. Створи функцію, яка приймає масив чисел та повертає новий масив, в якому кожен елемент є квадратом відповідного елемента вхідного масиву.
  */
 
-function squareNumber(arrNum) {
-  let newArr = arrNum.map((item) => Math.pow(item, 2));
-  console.log(newArr);
-}
+// function squareNumber(arrNum) {
+//   let newArr = arrNum.map((item) => Math.pow(item, 2));
+//   console.log(newArr);
+// }
 
-squareNumber([0.9, 10, 19, -13]);
+// squareNumber([0.9, 10, 19, -13]);
