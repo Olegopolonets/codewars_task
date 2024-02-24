@@ -192,3 +192,14 @@ function totalPrice(products) {
 }
 
 totalPrice(products);
+
+/*
+ *  9. Створи функцію, яка приймає масив чисел та повертає новий масив, в якому кожен елемент є квадратом відповідного елемента вхідного масиву.
+ */
+
+function squareNumber(arrNum) {
+  let newArr = arrNum.map((item) => Math.pow(item, 2));
+  console.log(newArr);
+}
+
+squareNumber([0.9, 10, 19, -13]);
