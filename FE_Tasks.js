@@ -290,22 +290,64 @@
 
 // notRepeats([1, 2, 3, 4, 5, 6], [1, 2, 3]); // [4, 5, 6]
 
-function findUniqueElementsV2(arr1, arr2) {
-  let uniqueArr = [];
-  for (let el of arr1) {
-    if (!arr2.includes(el)) {
-      uniqueArr.push(el);
-    }
-  }
-  console.log(uniqueArr);
+// function findUniqueElementsV2(arr1, arr2) {
+//   let uniqueArr = [];
+//   for (let el of arr1) {
+//     if (!arr2.includes(el)) {
+//       uniqueArr.push(el);
+//     }
+//   }
+//   console.log(uniqueArr);
+// }
+
+// findUniqueElementsV2([55, 2, 44, 63, 5, 6], [63, 21, 3, 33, 44, 5, 6]);
+
+// function findUniqueElementsV3(arr1, arr2) {
+//   let uniqueArr = [];
+//   uniqueArr = arr1.filter((item) => !arr2.includes(item));
+//   console.log(uniqueArr);
+// }
+
+// findUniqueElementsV3([55, 2, 44, 63, 5, 6, 7, 8, 9], [63, 21, 3, 33, 44, 5, 6]);
+
+/*
+ *  15. Створи функцію, яка приймає масив об'єктів та повертає новий масив, який містить тільки ті об'єкти з вхідного масиву, які мають властивість age більшу або дорівнює заданому значенню.
+ */
+
+const arrPeople = [
+  {
+    id: "1",
+    name: "Oleh",
+    age: 5,
+  },
+  {
+    id: "2",
+    name: "Asya",
+    age: 18,
+  },
+  {
+    id: "3",
+    name: "Kira",
+    age: 19,
+  },
+  {
+    id: "4",
+    name: "Katya",
+  },
+  {
+    id: "5",
+    name: "George",
+    age: 20,
+  },
+  {
+    id: "6",
+    name: "Karl",
+  },
+];
+
+function isAgeV1(obj) {
+  let newObj = obj.filter((item) => item.hasOwnProperty("age"));
+  console.log(newObj);
 }
 
-findUniqueElementsV2([55, 2, 44, 63, 5, 6], [63, 21, 3, 33, 44, 5, 6]);
-
-function findUniqueElementsV3(arr1, arr2) {
-  let uniqueArr = [];
-  uniqueArr = arr1.filter((item) => !arr2.includes(item));
-  console.log(uniqueArr);
-}
-
-findUniqueElementsV3([55, 2, 44, 63, 5, 6, 7, 8, 9], [63, 21, 3, 33, 44, 5, 6]);
+isAgeV1(arrPeople);
