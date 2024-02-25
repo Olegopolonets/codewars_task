@@ -384,9 +384,24 @@
 
 // uniqueStrV1("George");
 
-function uniqueStrV2(str) {
-  let uniqueChars = [...new Set(str)].join("");
-  console.log(uniqueChars);
+// function uniqueStrV2(str) {
+//   let uniqueChars = [...new Set(str)].join("");
+//   console.log(uniqueChars);
+// }
+
+// uniqueStrV2("compression");
+
+/*
+ *  17. Напиши функцію, яка приймає масив і повертає останній елемент масиву. Якщо масив порожній, функція повертає null.
+ */
+
+function lastElement(arr) {
+  let lastEl = arr.length - 1;
+  console.log(
+    arr[lastEl] !== "" && arr.length !== 0 ? `${arr[lastEl]} - this last element ` : "Empty"
+  );
 }
 
-uniqueStrV2("compression");
+lastElement([1, 2, "UK", null, undefined, 68]);
+lastElement([1, 2, ""]);
+lastElement([]);
