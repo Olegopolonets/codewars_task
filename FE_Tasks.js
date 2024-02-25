@@ -245,18 +245,29 @@
 // squareNumber([0.9, 10, 19, -13]);
 
 /*
- *  11. Створи функцію, яка приймає рядок та повертає новий рядок, в якому кожна літера перетворена на відповідну їй цифру в ASCII таблиці charCodeAt().
+ *  12. Створи функцію, яка приймає рядок та повертає новий рядок, в якому кожна літера перетворена на відповідну їй цифру в ASCII таблиці charCodeAt().
  */
 
-function stringToAscii(str) {
-  let asciiString = "";
-  for (let i = 0; i < str.length; i += 1) {
-    asciiString += str.charCodeAt(i) + " :|: ";
-  }
+// function stringToAscii(str) {
+//   let asciiString = "";
+//   for (let i = 0; i < str.length; i += 1) {
+//     asciiString += str.charCodeAt(i) + " :|: ";
+//   }
 
-  console.log(asciiString);
+//   console.log(asciiString);
+// }
+
+// stringToAscii("abcdefghijklmnopqrstuvwxyz".toLocaleUpperCase());
+
+// stringToAscii("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
+/*
+ *  13. Створи функцію, яка приймає масив чисел та повертає новий масив, який містить тільки непарні числа з вхідного масиву.
+ */
+
+function oddNumber(arrNum) {
+  let oddArr = arrNum.filter((item) => (!isNaN(item) ? item % 2 !== 0 : ""));
+  console.log(oddArr);
 }
 
-stringToAscii("abcdefghijklmnopqrstuvwxyz".toLocaleUpperCase());
-
-stringToAscii("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+oddNumber([1, 2, 3, 4, -0.56, 5, 0, 100000001, 17, "s", null, undefined]);
