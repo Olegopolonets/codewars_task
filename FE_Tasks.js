@@ -314,36 +314,36 @@
  *  15. Створи функцію, яка приймає масив об'єктів та повертає новий масив, який містить тільки ті об'єкти з вхідного масиву, які мають властивість age більшу або дорівнює заданому значенню.
  */
 
-const arrPeople = [
-  {
-    id: "1",
-    name: "Oleh",
-    age: 5,
-  },
-  {
-    id: "2",
-    name: "Asya",
-    age: 18,
-  },
-  {
-    id: "3",
-    name: "Kira",
-    age: 19,
-  },
-  {
-    id: "4",
-    name: "Katya",
-  },
-  {
-    id: "5",
-    name: "George",
-    age: 20,
-  },
-  {
-    id: "6",
-    name: "Karl",
-  },
-];
+// const arrPeople = [
+//   {
+//     id: "1",
+//     name: "Oleh",
+//     age: 5,
+//   },
+//   {
+//     id: "2",
+//     name: "Asya",
+//     age: 18,
+//   },
+//   {
+//     id: "3",
+//     name: "Kira",
+//     age: 19,
+//   },
+//   {
+//     id: "4",
+//     name: "Katya",
+//   },
+//   {
+//     id: "5",
+//     name: "George",
+//     age: 20,
+//   },
+//   {
+//     id: "6",
+//     name: "Karl",
+//   },
+// ];
 
 // function isAgeV1(obj) {
 //   let newObj = obj.filter((item) => item.hasOwnProperty("age"));
@@ -352,14 +352,34 @@ const arrPeople = [
 
 // isAgeV1(arrPeople);
 
-function isAgeV2(obj) {
-  let newObj = [];
-  for (let item of obj) {
-    if (item.hasOwnProperty("age")) {
-      newObj.push(item);
+// function isAgeV2(obj) {
+//   let newObj = [];
+//   for (let item of obj) {
+//     if (item.hasOwnProperty("age")) {
+//       newObj.push(item);
+//     }
+//   }
+//   console.log(newObj);
+// }
+
+// isAgeV2(arrPeople);
+
+/*
+ *  16. Створи функцію, яка приймає рядок та повертає новий рядок, який містить тільки унікальні символи з вхідного рядка,
+ *      в тому ж порядку, в якому вони зустрічаються в оригінальному рядку
+ */
+
+function uniqueStr(str) {
+  const uniqueChars = [];
+  const seen = new Set(); // Set для відстеження вже бачених символів
+
+  for (const char of str) {
+    if (!seen.has(char)) {
+      uniqueChars.push(char);
+      seen.add(char);
     }
   }
-  console.log(newObj);
+  console.log(uniqueChars.join(""));
 }
 
-isAgeV2(arrPeople);
+uniqueStr("George");
