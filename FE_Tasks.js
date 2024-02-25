@@ -275,17 +275,29 @@
 /*
  *  14. Створи функцію, яка приймає два масиви та повертає новий масив, який містить всі елементи першого масиву, які не зустрічаються в другому масиві.
  */
-function notRepeats(arr1, arr2) {
-  let newArr = [];
-  for (let i = 0; i < arr1.length; i++) {
-    for (let j = 0; j < arr2.length; j++) {
-      if (!arr2.includes(arr1[i])) {
-        newArr.push(arr1[i]);
-        break;
-      }
+// function notRepeats(arr1, arr2) {
+//   let newArr = [];
+//   for (let i = 0; i < arr1.length; i++) {
+//     for (let j = 0; j < arr2.length; j++) {
+//       if (!arr2.includes(arr1[i])) {
+//         newArr.push(arr1[i]);
+//         break;
+//       }
+//     }
+//   }
+//   console.log(newArr);
+// }
+
+// notRepeats([1, 2, 3, 4, 5, 6], [1, 2, 3]); // [4, 5, 6]
+
+function findUniqueElementsV2(arr1, arr2) {
+  let uniqueArr = [];
+  for (let el of arr1) {
+    if (!arr2.includes(el)) {
+      uniqueArr.push(el);
     }
   }
-  console.log(newArr);
+  console.log(uniqueArr);
 }
 
-notRepeats([1, 2, 3, 4, 5, 6], [1, 2, 3]); // [4, 5, 6]
+findUniqueElementsV2([55, 2, 44, 63, 5, 6], [63, 21, 3, 33, 44, 5, 6]);
