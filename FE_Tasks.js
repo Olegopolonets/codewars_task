@@ -345,9 +345,21 @@ const arrPeople = [
   },
 ];
 
-function isAgeV1(obj) {
-  let newObj = obj.filter((item) => item.hasOwnProperty("age"));
+// function isAgeV1(obj) {
+//   let newObj = obj.filter((item) => item.hasOwnProperty("age"));
+//   console.log(newObj);
+// }
+
+// isAgeV1(arrPeople);
+
+function isAgeV2(obj) {
+  let newObj = [];
+  for (let item of obj) {
+    if (item.hasOwnProperty("age")) {
+      newObj.push(item);
+    }
+  }
   console.log(newObj);
 }
 
-isAgeV1(arrPeople);
+isAgeV2(arrPeople);
