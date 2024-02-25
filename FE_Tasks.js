@@ -395,13 +395,24 @@
  *  17. Напиши функцію, яка приймає масив і повертає останній елемент масиву. Якщо масив порожній, функція повертає null.
  */
 
-function lastElement(arr) {
-  let lastEl = arr.length - 1;
-  console.log(
-    arr[lastEl] !== "" && arr.length !== 0 ? `${arr[lastEl]} - this last element ` : "Empty"
-  );
+// function lastElementV1(arr) {
+//   let lastEl = arr.length - 1;
+//   console.log(
+//     arr[lastEl] !== "" && arr.length !== 0 ? `${arr[lastEl]} - this last element ` : "Empty"
+//   );
+// }
+
+// lastElementV1([1, 2, "UK", null, undefined, 68]);
+// lastElementV1([1, 2, ""]);
+// lastElementV1([]);
+
+function lastElementV2(arr) {
+  if (arr.length === 0) {
+    return null;
+  }
+  console.log(arr.slice(-1)[0]);
 }
 
-lastElement([1, 2, "UK", null, undefined, 68]);
-lastElement([1, 2, ""]);
-lastElement([]);
+lastElementV2([1, 2, "UK", null, undefined, 68]);
+lastElementV2([1, 2, ""]);
+lastElementV2([]);
