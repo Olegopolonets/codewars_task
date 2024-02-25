@@ -197,41 +197,41 @@
  *  10. Створи функцію, яка приймає масив об'єктів з властивістю name та повертає новий масив,
  * який містить тільки ті об'єкти, в яких ім'я починається з певної літери.
  */
-const arrPeople = [
-  {
-    id: "1",
-    name: "Oleh",
-    age: 5,
-  },
-  {
-    id: "2",
-    name: "Asya",
-    age: 18,
-  },
-  {
-    id: "3",
-    name: "Kira",
-    age: 19,
-  },
-  {
-    id: "4",
-    name: "Katya",
-    age: 20,
-  },
-];
+// const arrPeople = [
+//   {
+//     id: "1",
+//     name: "Oleh",
+//     age: 5,
+//   },
+//   {
+//     id: "2",
+//     name: "Asya",
+//     age: 18,
+//   },
+//   {
+//     id: "3",
+//     name: "Kira",
+//     age: 19,
+//   },
+//   {
+//     id: "4",
+//     name: "Katya",
+//     age: 20,
+//   },
+// ];
 
-function isFirstLetterTrue(obj, letter) {
-  let correctName = [];
-  let newArr = obj.map((item) => item.name);
-  for (let i = 0; i < newArr.length; i++) {
-    if (newArr[i].split("")[0].toLowerCase() === letter.toLowerCase()) {
-      correctName.push(newArr[i]);
-    }
-  }
-  console.log(correctName);
-}
+// function isFirstLetterTrue(obj, letter) {
+//   let correctName = [];
+//   let newArr = obj.map((item) => item.name);
+//   for (let i = 0; i < newArr.length; i++) {
+//     if (newArr[i].split("")[0].toLowerCase() === letter.toLowerCase()) {
+//       correctName.push(newArr[i]);
+//     }
+//   }
+//   console.log(correctName);
+// }
 
-isFirstLetterTrue(arrPeople, "k");
+// isFirstLetterTrue(arrPeople, "k");
 
 /*
  *  11. Створи функцію, яка приймає масив чисел та повертає новий масив, в якому кожен елемент є квадратом відповідного елемента вхідного масиву.
@@ -243,3 +243,20 @@ isFirstLetterTrue(arrPeople, "k");
 // }
 
 // squareNumber([0.9, 10, 19, -13]);
+
+/*
+ *  11. Створи функцію, яка приймає рядок та повертає новий рядок, в якому кожна літера перетворена на відповідну їй цифру в ASCII таблиці charCodeAt().
+ */
+
+function stringToAscii(str) {
+  let asciiString = "";
+  for (let i = 0; i < str.length; i += 1) {
+    asciiString += str.charCodeAt(i) + " :|: ";
+  }
+
+  console.log(asciiString);
+}
+
+stringToAscii("abcdefghijklmnopqrstuvwxyz".toLocaleUpperCase());
+
+stringToAscii("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
