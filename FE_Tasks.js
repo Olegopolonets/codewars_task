@@ -301,3 +301,11 @@ function findUniqueElementsV2(arr1, arr2) {
 }
 
 findUniqueElementsV2([55, 2, 44, 63, 5, 6], [63, 21, 3, 33, 44, 5, 6]);
+
+function findUniqueElementsV3(arr1, arr2) {
+  let uniqueArr = [];
+  uniqueArr = arr1.filter((item) => !arr2.includes(item));
+  console.log(uniqueArr);
+}
+
+findUniqueElementsV3([55, 2, 44, 63, 5, 6, 7, 8, 9], [63, 21, 3, 33, 44, 5, 6]);
