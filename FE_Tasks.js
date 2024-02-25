@@ -265,9 +265,27 @@
  *  13. Створи функцію, яка приймає масив чисел та повертає новий масив, який містить тільки непарні числа з вхідного масиву.
  */
 
-function oddNumber(arrNum) {
-  let oddArr = arrNum.filter((item) => (!isNaN(item) ? item % 2 !== 0 : ""));
-  console.log(oddArr);
+// function oddNumber(arrNum) {
+//   let oddArr = arrNum.filter((item) => (!isNaN(item) ? item % 2 !== 0 : ""));
+//   console.log(oddArr);
+// }
+
+// oddNumber([1, 2, 3, 4, -0.56, 5, 0, 100000001, 17, "s", null, undefined]);
+
+/*
+ *  14. Створи функцію, яка приймає два масиви та повертає новий масив, який містить всі елементи першого масиву, які не зустрічаються в другому масиві.
+ */
+function notRepeats(arr1, arr2) {
+  let newArr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (!arr2.includes(arr1[i])) {
+        newArr.push(arr1[i]);
+        break;
+      }
+    }
+  }
+  console.log(newArr);
 }
 
-oddNumber([1, 2, 3, 4, -0.56, 5, 0, 100000001, 17, "s", null, undefined]);
+notRepeats([1, 2, 3, 4, 5, 6], [1, 2, 3]); // [4, 5, 6]
