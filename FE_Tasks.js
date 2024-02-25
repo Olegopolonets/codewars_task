@@ -369,17 +369,24 @@
  *      в тому ж порядку, в якому вони зустрічаються в оригінальному рядку
  */
 
-function uniqueStr(str) {
-  const uniqueChars = [];
-  const seen = new Set(); // Set для відстеження вже бачених символів
+// function uniqueStrV1(str) {
+//   const uniqueChars = [];
+//   const seen = new Set(); // Set для відстеження вже бачених символів
 
-  for (const char of str) {
-    if (!seen.has(char)) {
-      uniqueChars.push(char);
-      seen.add(char);
-    }
-  }
-  console.log(uniqueChars.join(""));
+//   for (const char of str) {
+//     if (!seen.has(char)) {
+//       uniqueChars.push(char);
+//       seen.add(char);
+//     }
+//   }
+//   console.log(uniqueChars.join(""));
+// }
+
+// uniqueStrV1("George");
+
+function uniqueStrV2(str) {
+  let uniqueChars = [...new Set(str)].join("");
+  console.log(uniqueChars);
 }
 
-uniqueStr("George");
+uniqueStrV2("compression");
