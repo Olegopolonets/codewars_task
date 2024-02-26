@@ -472,20 +472,31 @@
  *  21. Створи функцію, яка приймає масив чисел та повертає новий масив, який містить кожне число вихідного масиву, помножене на 2.
  */
 
-// function doubling(arr) {
+// function doublingV1(arr) {
 //   let newArr = arr.map((item) => item * 2);
 //   console.log(newArr);
 // }
 
-// doubling([1, 4, 5, 6, -8, 2, -12, 0.09, 0.54, 0, 0.154]);
+// doublingV1([1, 4, 5, 6, -8, 2, -12, 0.09, 0.54, 0, 0.154]);
 
-function doubling(arr) {
-  let newArr = [];
+// function doublingV2(arr) {
+//   let newArr = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i] * 2);
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr.push(arr[i] * 2);
+//   }
+//   console.log(newArr);
+// }
+
+// doublingV2([1, 4, 5, 6, -8, 2, -12, 0.09, 0.54, 0, 0.154]);
+
+/*
+ *  22. Створи функцію, яка приймає масив рядків та повертає новий масив, який містить тільки ті рядки, які містять більше 5 символів.
+ */
+
+function minStr(arr) {
+  let newArr = arr.filter((item) => (item.trim().length >= 5 ? item : null));
   console.log(newArr);
 }
 
-doubling([1, 4, 5, 6, -8, 2, -12, 0.09, 0.54, 0, 0.154]);
+minStr(["qwerty", "This repository moved", "", "location", "abcdfc", "                  "]);
