@@ -441,8 +441,29 @@
  *       в якому елементи - це квадрати чисел з вхідного масиву, відсортовані в порядку зростання.
  */
 
-function powSort(arr) {
-  let newArr = arr.map((item) => Math.pow(item, 2)).sort((a, b) => a - b);
-  console.log(newArr);
+// function powSort(arr) {
+//   let newArr = arr.map((item) => Math.pow(item, 2)).sort((a, b) => a - b);
+//   console.log(newArr);
+// }
+// powSort([9, 3, -2, 12, 4]);
+
+/*
+ *  20. Напиши функцію, яка приймає рядок як аргумент та повертає кількість голосних літер у рядку.
+ */
+function vowelCount(str) {
+  const vowels = ["a", "e", "i", "o", "u", "y"];
+  const strArr = str.split("");
+  let vowelCount = 0;
+
+  for (const char of strArr) {
+    if (vowels.includes(char.toLowerCase())) {
+      vowelCount++;
+    }
+  }
+  console.log(vowelCount);
 }
-powSort([9, 3, -2, 12, 4]);
+
+vowelCount("includes");
+vowelCount("UUUUUUUUUUU");
+vowelCount("aRRR");
+vowelCount("eeeeeeeeeeeeeeeeeeeeeeeeeeee");
