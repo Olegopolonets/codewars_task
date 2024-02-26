@@ -422,16 +422,27 @@
  *      в якому елементи - це сума елементів з однаковими індексами у вхідних масивах.
  */
 
-function indexSum(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    console.log("Різна довжина масивів");
-    return;
-  }
-  let sumArr = [];
-  for (let i = 0; i < arr1.length; i++) {
-    sumArr.push(arr1[i] + arr2[i]);
-  }
-  console.log(sumArr);
-}
+// function indexSum(arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     console.log("Різна довжина масивів");
+//     return;
+//   }
+//   let sumArr = [];
+//   for (let i = 0; i < arr1.length; i++) {
+//     sumArr.push(arr1[i] + arr2[i]);
+//   }
+//   console.log(sumArr);
+// }
 
-indexSum([1, 2, 3, 4], [2, 1, 3, 4]);
+// indexSum([1, 2, 3, 4], [2, 1, 3, 4]);
+
+/*
+ *  19. Напиши функцію, яка приймає масив чисел і повертає новий масив,
+ *       в якому елементи - це квадрати чисел з вхідного масиву, відсортовані в порядку зростання.
+ */
+
+function powSort(arr) {
+  let newArr = arr.map((item) => Math.pow(item, 2)).sort((a, b) => a - b);
+  console.log(newArr);
+}
+powSort([9, 3, -2, 12, 4]);
