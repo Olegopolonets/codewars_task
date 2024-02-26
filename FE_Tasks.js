@@ -494,9 +494,21 @@
  *  22. Створи функцію, яка приймає масив рядків та повертає новий масив, який містить тільки ті рядки, які містять більше 5 символів.
  */
 
-function minStr(arr) {
-  let newArr = arr.filter((item) => (item.trim().length >= 5 ? item : null));
+// function minStrV1(arr) {
+//   let newArr = arr.filter((item) => (item.trim().length >= 5 ? item : null));
+//   console.log(newArr);
+// }
+
+// minStrV1(["qwerty", "This repository moved", "", "location", "abcdfc", "                  "]);
+
+function minStrV2(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].trim().length > 5) {
+      newArr.push(arr[i]);
+    }
+  }
   console.log(newArr);
 }
 
-minStr(["qwerty", "This repository moved", "", "location", "abcdfc", "                  "]);
+minStrV2(["qwerty", "This repository moved", "", "location", "abcdfc", "                  "]);
