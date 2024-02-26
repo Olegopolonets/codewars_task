@@ -472,8 +472,19 @@
  *  21. Створи функцію, яка приймає масив чисел та повертає новий масив, який містить кожне число вихідного масиву, помножене на 2.
  */
 
+// function doubling(arr) {
+//   let newArr = arr.map((item) => item * 2);
+//   console.log(newArr);
+// }
+
+// doubling([1, 4, 5, 6, -8, 2, -12, 0.09, 0.54, 0, 0.154]);
+
 function doubling(arr) {
-  let newArr = arr.map((item) => item * 2);
+  let newArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr[i] * 2);
+  }
   console.log(newArr);
 }
 
