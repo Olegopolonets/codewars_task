@@ -501,14 +501,30 @@
 
 // minStrV1(["qwerty", "This repository moved", "", "location", "abcdfc", "                  "]);
 
-function minStrV2(arr) {
+// function minStrV2(arr) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].trim().length > 5) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   console.log(newArr);
+// }
+
+// minStrV2(["qwerty", "This repository moved", "", "location", "abcdfc", "                  "]);
+
+/*
+ *  23. Створи функцію, яка приймає масив рядків та повертає новий масив, який містить тільки рядки, що починаються з великої літери
+ */
+
+function isUpperFLetter(arr) {
   let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].trim().length > 5) {
-      newArr.push(arr[i]);
+  for (let str of arr) {
+    if (str.charAt(0).toUpperCase() === str.charAt(0)) {
+      newArr.push(str);
     }
   }
   console.log(newArr);
 }
 
-minStrV2(["qwerty", "This repository moved", "", "location", "abcdfc", "                  "]);
+isUpperFLetter(["qwerty", "This repository moved", "", "location", "abcdfc", "  "]);
