@@ -450,20 +450,31 @@
 /*
  *  20. Напиши функцію, яка приймає рядок як аргумент та повертає кількість голосних літер у рядку.
  */
-function vowelCount(str) {
-  const vowels = ["a", "e", "i", "o", "u", "y"];
-  const strArr = str.split("");
-  let vowelCount = 0;
+// function vowelCount(str) {
+//   const vowels = ["a", "e", "i", "o", "u", "y"];
+//   const strArr = str.split("");
+//   let vowelCount = 0;
 
-  for (const char of strArr) {
-    if (vowels.includes(char.toLowerCase())) {
-      vowelCount++;
-    }
-  }
-  console.log(vowelCount);
+//   for (const char of strArr) {
+//     if (vowels.includes(char.toLowerCase())) {
+//       vowelCount++;
+//     }
+//   }
+//   console.log(vowelCount);
+// }
+
+// vowelCount("includes");
+// vowelCount("UUUUUUUUUUU");
+// vowelCount("aRRR");
+// vowelCount("eeeeeeeeeeeeeeeeeeeeeeeeeeee");
+
+/*
+ *  21. Створи функцію, яка приймає масив чисел та повертає новий масив, який містить кожне число вихідного масиву, помножене на 2.
+ */
+
+function doubling(arr) {
+  let newArr = arr.map((item) => item * 2);
+  console.log(newArr);
 }
 
-vowelCount("includes");
-vowelCount("UUUUUUUUUUU");
-vowelCount("aRRR");
-vowelCount("eeeeeeeeeeeeeeeeeeeeeeeeeeee");
+doubling([1, 4, 5, 6, -8, 2, -12, 0.09, 0.54, 0, 0.154]);
