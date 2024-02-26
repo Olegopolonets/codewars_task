@@ -406,13 +406,32 @@
 // lastElementV1([1, 2, ""]);
 // lastElementV1([]);
 
-function lastElementV2(arr) {
-  if (arr.length === 0) {
-    return null;
+// function lastElementV2(arr) {
+//   if (arr.length === 0) {
+//     return null;
+//   }
+//   console.log(arr.slice(-1)[0]);
+// }
+
+// lastElementV2([1, 2, "UK", null, undefined, 68]);
+// lastElementV2([1, 2, ""]);
+// lastElementV2([]);
+
+/*
+ *  18. Напиши функцію, яка приймає два масиви і повертає новий масив,
+ *      в якому елементи - це сума елементів з однаковими індексами у вхідних масивах.
+ */
+
+function indexSum(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    console.log("Різна довжина масивів");
+    return;
   }
-  console.log(arr.slice(-1)[0]);
+  let sumArr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    sumArr.push(arr1[i] + arr2[i]);
+  }
+  console.log(sumArr);
 }
 
-lastElementV2([1, 2, "UK", null, undefined, 68]);
-lastElementV2([1, 2, ""]);
-lastElementV2([]);
+indexSum([1, 2, 3, 4], [2, 1, 3, 4]);
