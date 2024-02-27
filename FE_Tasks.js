@@ -532,14 +532,14 @@ function isUpperFLetterV1(arr) {
 
 isUpperFLetterV1(["qwerty", "This repository moved", "", "location", "abcdfc", "  "]);
 
-// function isUpperFLetterV2(arr) {
-//   let newArr = [];
-//   for (let str of arr) {
-//     if (str.charAt(0).toUpperCase() === str.charAt(0)) {
-//       newArr.push(str);
-//     }
-//   }
-//   console.log(newArr);
-// }
+function isUpperFLetterV2(arr) {
+  let newArr = [];
+  for (let str of arr) {
+    if (str.charAt(0).toUpperCase() === str.charAt(0)) {
+      newArr.push(str);
+    }
+  }
+  console.log(newArr);
+}
 
-// isUpperFLetterV2(["qwerty", "This repository moved", "", "location", "abcdfc", "  "]);
+isUpperFLetterV2(["qwerty", "This repository moved", "", "location", "abcdfc", "  "]);
