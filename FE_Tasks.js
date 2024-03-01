@@ -548,15 +548,20 @@
  *  24. Створи функцію, яка приймає масив рядків та повертає новий масив, який містить тільки рядки, які містять підрядок "JS".
  */
 
-let arrStr = ["Odder than the rest", "Rock Off!", "Hello JS"];
-function isContainSubstring(arrStr, sub) {
-  let newArr = [];
-  for (let char of arrStr) {
-    if (char.indexOf(sub) !== -1) {
-      newArr.push(char);
-    }
-  }
-  console.log(newArr);
-}
+// let arrStr = ["Odder than the rest", "Rock Off!", "Hello JS"];
+// function isContainSubstring(arrStr, sub) {
+//   let newArr = [];
+//   for (let char of arrStr) {
+//     if (char.indexOf(sub) !== -1) {
+//       newArr.push(char);
+//     }
+//   }
+//   console.log(newArr);
+// }
 
-isContainSubstring(arrStr, "the");
+// isContainSubstring(arrStr, "the");
+
+/*
+ *  25. Створи функцію, яка приймає масив чисел та повертає true,
+ *      якщо масив містить послідовність чисел в порядку зростання (наприклад, [1, 2, 3]), або false - якщо не містить.
+ */
