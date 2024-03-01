@@ -549,14 +549,14 @@
  */
 
 let arrStr = ["Odder than the rest", "Rock Off!", "Hello JS"];
-function isContainSubstring(arrStr) {
+function isContainSubstring(arrStr, sub) {
   let newArr = [];
   for (let char of arrStr) {
-    if (char.indexOf("JS") !== -1) {
+    if (char.indexOf(sub) !== -1) {
       newArr.push(char);
     }
   }
   console.log(newArr);
 }
 
-isContainSubstring(arrStr);
+isContainSubstring(arrStr, "the");
