@@ -566,15 +566,16 @@
  *      якщо масив містить послідовність чисел в порядку зростання (наприклад, [1, 2, 3]), або false - якщо не містить.
  */
 
-function isSequenceNumbers(arrNum) {
-  for (let i = 0; i < arrNum.length; i++) {
-    if (arrNum[i] > arrNum[i + 1]) {
-      console.log("true");
+function isSortedAscending(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
+      return `${arr} - масив не містить послідовність чисел в порядку зростання`;
     }
   }
+  console.log(`${arr} - масив містить послідовність чисел в порядку зростання`);
 }
 
-isSequenceNumbers([1, 2, 3]);
-isSequenceNumbers([9, 10, 11]);
-isSequenceNumbers([1, 6, 3]);
-isSequenceNumbers([1, 5, 3]);
+isSortedAscending([1, 2, 3]);
+isSortedAscending([9, 10, 11]);
+isSortedAscending([1, 6, 3]);
+isSortedAscending([1, 5, 3]);
