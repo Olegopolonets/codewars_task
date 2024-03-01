@@ -565,3 +565,16 @@
  *  25. Створи функцію, яка приймає масив чисел та повертає true,
  *      якщо масив містить послідовність чисел в порядку зростання (наприклад, [1, 2, 3]), або false - якщо не містить.
  */
+
+function isSequenceNumbers(arrNum) {
+  for (let i = 0; i < arrNum.length; i++) {
+    if (arrNum[i] > arrNum[i + 1]) {
+      console.log("true");
+    }
+  }
+}
+
+isSequenceNumbers([1, 2, 3]);
+isSequenceNumbers([9, 10, 11]);
+isSequenceNumbers([1, 6, 3]);
+isSequenceNumbers([1, 5, 3]);
