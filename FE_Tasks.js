@@ -547,3 +547,16 @@
 /*
  *  24. Створи функцію, яка приймає масив рядків та повертає новий масив, який містить тільки рядки, які містять підрядок "JS".
  */
+
+let arrStr = ["Odder than the rest", "Rock Off!", "Hello JS"];
+function isContainSubstring(arrStr) {
+  let newArr = [];
+  for (let char of arrStr) {
+    if (char.indexOf("JS") !== -1) {
+      newArr.push(char);
+    }
+  }
+  console.log(newArr);
+}
+
+isContainSubstring(arrStr);
