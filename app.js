@@ -486,17 +486,33 @@
  * Odd Ones Out!
  */
 
-function oddOnesOut(list) {
-  const counts = {};
+// function oddOnesOut(list) {
+//   const counts = {};
 
-  for (const num of list) {
-    counts[num] = (counts[num] || 0) + 1;
-  }
-  console.log("counts", counts);
+//   for (const num of list) {
+//     counts[num] = (counts[num] || 0) + 1;
+//   }
+//   console.log("counts", counts);
 
-  console.log(list.filter((num) => counts[num] % 2 === 0));
-}
+//   console.log(list.filter((num) => counts[num] % 2 === 0));
+// }
 
-oddOnesOut([1, 2, 3, 1, 3, 3]);
+// oddOnesOut([1, 2, 3, 1, 3, 3]);
 
-oddOnesOut([75, 68, 75, 47, 68]);
+// oddOnesOut([75, 68, 75, 47, 68]);
+
+/*
+ *  FizzBuzz
+ */
+
+// for (let i = 1; i <= 100; i += 1) {
+//   if (i % 5 === 0 && i % 3 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } else {
+//     console.log(i);
+//   }
+// }

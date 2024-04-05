@@ -566,16 +566,16 @@
  *      якщо масив містить послідовність чисел в порядку зростання (наприклад, [1, 2, 3]), або false - якщо не містить.
  */
 
-function isSortedAscending(arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] > arr[i + 1]) {
-      return `${arr} - масив не містить послідовність чисел в порядку зростання`;
-    }
-  }
-  console.log(`${arr} - масив містить послідовність чисел в порядку зростання`);
-}
+// function isSortedAscending(arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] > arr[i + 1]) {
+//       return `${arr} - масив не містить послідовність чисел в порядку зростання`;
+//     }
+//   }
+//   console.log(`${arr} - масив містить послідовність чисел в порядку зростання`);
+// }
 
-isSortedAscending([1, 2, 3]);
-isSortedAscending([9, 10, 11]);
-isSortedAscending([1, 6, 3]);
-isSortedAscending([1, 5, 3]);
+// isSortedAscending([1, 2, 3]);
+// isSortedAscending([9, 10, 11]);
+// isSortedAscending([1, 6, 3]);
+// isSortedAscending([1, 5, 3]);
