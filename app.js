@@ -530,6 +530,13 @@ function minMaxArr(numArr) {
 
 minMaxArr(numbers);
 
+function lessGivenValue(number, numArr) {
+  let lessArr = numArr.filter((item) => number > item);
+  console.log(`${number} >`, ...lessArr);
+}
+
+lessGivenValue(50, numbers);
+
 /*
  *  FizzBuzz
  */
