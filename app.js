@@ -501,22 +501,6 @@
 
 // oddOnesOut([75, 68, 75, 47, 68]);
 
-/*
- *  FizzBuzz
- */
-
-// for (let i = 1; i <= 100; i += 1) {
-//   if (i % 5 === 0 && i % 3 === 0) {
-//     console.log("FizzBuzz");
-//   } else if (i % 5 === 0) {
-//     console.log("Buzz");
-//   } else if (i % 3 === 0) {
-//     console.log("Fizz");
-//   } else {
-//     console.log(i);
-//   }
-// }
-
 /* 
 Задача:
 Напишіть код JavaScript, який робить наступне:
@@ -534,17 +518,30 @@ for (let i = 0; i < 10; i += 1) {
 }
 console.log(numbers);
 
-let min = numbers[0];
-
-for (let i = 0; i < numbers.length; i += 1) {
-  if (min > numbers[i]) {
-    min = numbers[i];
+function minMaxArr(numArr) {
+  if (numArr.length === 0) {
+    return console.log("number array empty");
   }
+  let min = Math.min(...numArr);
+  let max = Math.max(...numArr);
+  console.log("max: ", max);
+  console.log("min: ", min);
 }
-console.log(min);
 
-// let min = Math.min(...numbers);
-// let max = Math.max(...numbers);
+minMaxArr(numbers);
 
-// console.log("max: ", max);
-// console.log("min: ", min);
+/*
+ *  FizzBuzz
+ */
+
+// for (let i = 1; i <= 100; i += 1) {
+//   if (i % 5 === 0 && i % 3 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } else {
+//     console.log(i);
+//   }
+// }
