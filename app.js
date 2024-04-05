@@ -505,14 +505,39 @@
  *  FizzBuzz
  */
 
-for (let i = 1; i <= 100; i += 1) {
-  if (i % 5 === 0 && i % 3 === 0) {
-    console.log("FizzBuzz");
-  } else if (i % 5 === 0) {
-    console.log("Buzz");
-  } else if (i % 3 === 0) {
-    console.log("Fizz");
-  } else {
-    console.log(i);
-  }
+// for (let i = 1; i <= 100; i += 1) {
+//   if (i % 5 === 0 && i % 3 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+/* 
+Задача:
+Напишіть код JavaScript, який робить наступне:
+
+Створює масив з 10 випадкових чисел від 1 до 100.
+Знаходить найменше число в масиві.
+Виводить на консоль найменше число та його індекс в масиві.
+
+*/
+
+let numbers = [];
+
+for (let i = 0; i < 10; i += 1) {
+  numbers.push(Math.floor(Math.random() * 100) + 1);
 }
+console.log(numbers);
+
+let min = numbers[0];
+
+// let min = Math.min(...numbers);
+// let max = Math.max(...numbers);
+
+// console.log("max: ", max);
+// console.log("min: ", min);
