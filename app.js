@@ -536,6 +536,13 @@ console.log(numbers);
 
 let min = numbers[0];
 
+for (let i = 0; i < numbers.length; i += 1) {
+  if (min > numbers[i]) {
+    min = numbers[i];
+  }
+}
+console.log(min);
+
 // let min = Math.min(...numbers);
 // let max = Math.max(...numbers);
 
