@@ -511,31 +511,31 @@
 
 */
 
-let numbers = [];
+// let numbers = [];
 
-for (let i = 0; i < 10; i += 1) {
-  numbers.push(Math.floor(Math.random() * 100) + 1);
-}
-console.log(numbers);
+// for (let i = 0; i < 10; i += 1) {
+//   numbers.push(Math.floor(Math.random() * 100) + 1);
+// }
+// console.log(numbers);
 
-function minMaxArr(numArr) {
-  if (numArr.length === 0) {
-    return console.log("number array empty");
-  }
-  let min = Math.min(...numArr);
-  let max = Math.max(...numArr);
-  console.log("max: ", max);
-  console.log("min: ", min);
-}
+// function minMaxArr(numArr) {
+//   if (numArr.length === 0) {
+//     return console.log("number array empty");
+//   }
+//   let min = Math.min(...numArr);
+//   let max = Math.max(...numArr);
+//   console.log("max: ", max);
+//   console.log("min: ", min);
+// }
 
-minMaxArr(numbers);
+// minMaxArr(numbers);
 
-function lessGivenValue(number, numArr) {
-  let lessArr = numArr.filter((item) => number > item);
-  console.log(`${number} >`, ...lessArr);
-}
+// function lessGivenValue(number, numArr) {
+//   let lessArr = numArr.filter((item) => number > item);
+//   console.log(`${number} >`, ...lessArr);
+// }
 
-lessGivenValue(50, numbers);
+// lessGivenValue(50, numbers);
 
 /*
  *  FizzBuzz
@@ -552,3 +552,13 @@ lessGivenValue(50, numbers);
 //     console.log(i);
 //   }
 // }
+
+const sum = function (a, b) {
+  let product = a * b;
+  let numArr = product.toString().split("");
+  console.log("numArr: ", numArr);
+  let result = numArr.reduce((a, b) => +a + +b);
+  console.log("result : ", result);
+};
+
+sum(8, 9);
