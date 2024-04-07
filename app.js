@@ -552,13 +552,3 @@
 //     console.log(i);
 //   }
 // }
-
-const sum = function (a, b) {
-  let product = a * b;
-  let numArr = product.toString().split("");
-  console.log("numArr: ", numArr);
-  let result = numArr.reduce((a, b) => +a + +b);
-  console.log("result : ", result);
-};
-
-sum(8, 9);
