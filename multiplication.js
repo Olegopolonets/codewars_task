@@ -3,6 +3,7 @@ const inputTwoValue = document.getElementById("multiplier2");
 const button = document.getElementById("button");
 const textMultp = document.getElementById("textMultp");
 const finalSum = document.getElementById("finalSum");
+const allNumber = document.getElementById("allNumber");
 
 const validateNumber = (value) => {
   if (value === "") {
@@ -27,10 +28,13 @@ button.addEventListener("click", (event) => {
   if (validateNumber(a) && validateNumber(b)) {
     let product = a * b;
     textMultp.textContent = product;
-    let numArr = product.toString().split("");
+    let numArr = product
+      .toString()
+      .split("")
+      .filter((item) => item !== ".");
 
     let result = numArr.reduce((accumulator, currentValue) => +accumulator + +currentValue, 0);
-
-    finalSum.textContent = `${numArr}  ${result} `;
+    allNumber.textContent = `[${numArr}];`;
+    finalSum.textContent = result;
   }
 });
