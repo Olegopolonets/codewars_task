@@ -538,7 +538,7 @@
 // lessGivenValue(50, numbers);
 
 /*
- *  FizzBuzz
+ *  FizzBuzz V3
  */
 
 for (let i = 1; i <= 100; i += 1) {
